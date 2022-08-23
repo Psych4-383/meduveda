@@ -1,0 +1,77 @@
+body {
+    color: #122049;
+}
+
+#dashboard {
+    width: 100vw;
+    height: 100vh;
+    float: right;
+    display: flex;
+    flex-direction: column;
+}
+
+.rounded {
+    border-radius: 10px;
+    margin: 10px;
+}
+
+.reports, .appointments{
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    padding: 1em;
+    font-size: 20px;
+    cursor: pointer;
+    justify-content: center;
+    align-items: flex-end;
+    background: linear-gradient(150deg, #409bee 0%, #122049 300%);
+    color: #122049;
+}
+
+.rounded p{
+    min-width: 220px;
+    width: 100%;
+}
+
+.rounded img {
+    margin-bottom: 2em;
+}
+
+
+.upcoming{
+    margin-top: 2em;
+}
+
+.side {
+    min-width: 300px;
+    border-right: 1px solid #00000026;
+    height: 100vh;
+    position: sticky;
+    margin: 0px;
+}
+
+.side ul {
+    list-style-type: none;
+    margin: 0%;
+    padding: 1em;
+}
+
+.side li {
+    padding: 10px;
+    font-size: 1.3rem;
+    border-radius: 10px;
+}
+
+.side li:hover{
+    opacity: 0.9;
+}
+
+.secondary {
+    color: #f7f7ff;
+    background-color: #122049;
+}
+
+.back, .next {
+    margin: 0.5em;
+    cursor: pointer;
+}

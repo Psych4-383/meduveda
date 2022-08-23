@@ -1,0 +1,32 @@
+<form action="/login" class="login" method="post">
+    <input type="text" placeholder="Mail" name="emailLog">
+    <input type="text"placeholder="Password" name="passLog">
+    <button>Login</button>
+</form>
+
+<% docList.forEach(element => { %>
+    <h1><%=element.name %> </h1>
+    <img height="200" src=<%=element.photo %>  alt="" srcset="">
+    <button onclick="handleAppoint('<%=element.id %>')">Request</button>
+    <input type="datetime-local" name="appTime" id="appTime">
+<% }) %>
+
+
+
+<script defer>
+    function handleAppoint(id){
+        console.log('Ran Func')
+        const requestOptions = {
+            method: "POST",
+            body: JSON.stringify({
+                id:id,
+                time:document.getElementById('appTime').value
+            }),
+            headers: {
+                "Content-Type": "application/json; charset=utf-8"
+            },
+        };
+        fetch('/appoint',requestOptions)
+    }
+</script>
+
